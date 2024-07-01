@@ -42,6 +42,7 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.PacketDistributor;
+import ichttt.mods.firstaid.common.damagesystem.PlayerDamageModel;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -136,7 +137,8 @@ public class CommonUtils {
 
     @Nonnull
     public static AbstractPlayerDamageModel getDamageModel(Player player) {
-        return getOptionalDamageModel(player).orElseThrow(() -> new IllegalArgumentException("Player " + player.getName().getContents() + " is missing a damage model!"));
+        // This should fix the crash for now at least.
+        return getOptionalDamageModel(player).orElse(PlayerDamageModel.create());
     }
 
     @Nonnull
