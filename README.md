@@ -17,3 +17,6 @@ The API package is licensed under the LGPLv2.1 as in API_LICENSE
 
 This project currently uses the heartbeat sound from <href>http://soundbible.com/2162-Human-Heartbeat.html</href>.
 It is licensed under the Attribution 3.0 license. Special thanks!
+
+Original Creator: ichttt
+This fork only changes a singular line, so please ichttt update it
